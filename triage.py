@@ -6,10 +6,10 @@ import uuid
 
 
 class Severity(Enum):
-    CRITICAL = 4  # BUG 2: values are inverted — LOW sorts before CRITICAL
-    HIGH = 3
-    MEDIUM = 2
-    LOW = 1
+    CRITICAL = 1  # FIX 2: restored correct values so CRITICAL sorts first
+    HIGH = 2
+    MEDIUM = 3
+    LOW = 4
 
     @classmethod
     def from_string(cls, value: str) -> "Severity":
@@ -47,7 +47,7 @@ class TriageQueue:
         self._cases: List[Case] = []
 
     def submit(self, description: str, severity_input: str) -> Case:
-        if not description:  # BUG 1: missing .strip() — whitespace-only descriptions are accepted
+        if not description.strip():  # FIX 1: .strip() ensures whitespace-only strings are rejected
             raise ValueError("Description cannot be empty.")
         severity = Severity.from_string(severity_input)
         case = Case(description=description.strip(), severity=severity)
@@ -60,7 +60,7 @@ class TriageQueue:
 
     def resolve(self, case_id: str) -> Case:
         for case in self._cases:
-            if not case.resolved:  # BUG 3: ID is never checked — resolves first open case regardless of case_id
+            if case.id == case_id and not case.resolved:  # FIX 3: restored ID check so only the matching case is resolved
                 case.resolve()
                 return case
         raise ValueError(f"No open case found with ID '{case_id}'.")
