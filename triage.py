@@ -6,10 +6,10 @@ import uuid
 
 
 class Severity(Enum):
-    CRITICAL = 4
-    HIGH = 3
-    MEDIUM = 2
-    LOW = 1
+    CRITICAL = 1
+    HIGH = 2
+    MEDIUM = 3
+    LOW = 4
 
     @classmethod
     def from_string(cls, value: str) -> "Severity":
