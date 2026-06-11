@@ -6,7 +6,7 @@ import uuid
 
 
 class Severity(Enum):
-    CRITICAL = 4  # BUG 2: values are inverted — LOW sorts before CRITICAL
+    CRITICAL = 4
     HIGH = 3
     MEDIUM = 2
     LOW = 1

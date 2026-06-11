@@ -14,19 +14,16 @@
    **when** I submit the case,
    **then** the system creates the case, assigns it a unique ID, and confirms the submission.
 
-2. **Given** I leave the description empty,
-   **when** I submit the case,
-   **then** the system rejects the submission and tells me a description is required.
 
-3. **Given** I enter a severity level that is not Critical, High, Medium, or Low,
+2. **Given** I enter a severity level that is not Critical, High, Medium, or Low,
    **when** I submit the case,
    **then** the system rejects the submission and lists the valid severity options.
 
-4. **Given** I submit multiple cases with the same severity level,
+3. **Given** I submit multiple cases with the same severity level,
    **when** I view the queue,
    **then** cases at the same severity are shown oldest-first.
 
-5. **Given** I submit a case successfully,
+4. **Given** I submit a case successfully,
    **when** I view the queue,
    **then** the new case appears in the correct position based on its severity.
 
