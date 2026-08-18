@@ -23,5 +23,6 @@ Try it yourself. You'll see it allows an empty string.
 Bug 2 
 **How to replicate:**
 
-Our board is visualizing the Triage in an inverted format. When this adds up we won't see the most important ones at the top Please fix!
+Our board is visualizing the Triage in an inverted format. When this adds up we won't see the most important ones at the top. Please Fix!
+
 ---
