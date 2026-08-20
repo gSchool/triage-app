@@ -1,6 +1,6 @@
 # Bug Report
 
-There are 2 bugs present in our application. They are listed below. Often times you will be given sparse information regarding a bug. The following simulates how bugs may be communicated to your team. Its our job to:
+There are 3 bugs present in our application. They are listed below. Often times you will be given sparse information regarding a bug. The following simulates how bugs may be communicated to your team. Its our job to:
 
 1) Make sense of what the bug reports are trying to convey.
 2) Reproduce the bug on our end.
@@ -24,5 +24,12 @@ Bug 2
 **How to replicate:**
 
 Our board is visualizing the Triage in an inverted format. When this adds up we won't see the most important ones at the top. Please Fix!
+
+---
+
+Bug 3 
+**How to replicate:**
+
+Closing a case doesn't seem to respect the ID we type in. Submit two cases, then try to resolve the second one you submitted. The first one closes instead. We can even type an ID that doesn't exist at all and it still reports a success. Please fix!
 
 ---

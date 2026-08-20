@@ -2,6 +2,17 @@
 
 ## Project Overview
 
+## Spec Bundle
+
+Specs live in /resources/spec_bundle. Load only what's relevant to the current task.
+
+- User stories → @resources/spec_bundle/user_stories.md
+- Acceptance criteria → @resources/spec_bundle/acceptance_criteria.md
+- Goals / non-goals → @resources/spec_bundle/goals_non_goals.md
+- Requirements (EARS) → @resources/spec_bundle/requirements_ears.md
+
+Do not load the full /resources folder. Reference only the file(s) relevant to the task at hand.
+
 A Python CLI that lets operators manage a priority queue of triage cases. Cases have a severity (Critical / High / Medium / Low) and a short description. Operators can submit cases, view the sorted queue, and resolve cases by ID.
 
 ## End Goal — Target CLI Output

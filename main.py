@@ -16,7 +16,7 @@ def display_queue(queue: TriageQueue) -> None:
 
 
 def submit_case(queue: TriageQueue) -> None:
-    description = input("Description: ").strip()
+    description = input("Description: ")
     severity = input("Severity (Critical / High / Medium / Low): ").strip()
 
     try:
