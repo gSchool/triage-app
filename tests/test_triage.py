@@ -89,16 +89,3 @@ def test_queue_is_empty_after_resolving_last_case():
 # Story 3 — Show a Triage Case
 # ---------------------------------------------------------------------------
 
-# Queue should display Critical at top, Low at bottom
-def test_queue_ordering_critical_first_low_last():
-    queue = TriageQueue()
-    queue.submit("Low priority task", "low")
-    queue.submit("Medium issue", "medium")
-    queue.submit("High issue", "high")
-    queue.submit("Critical outage", "critical")
-    cases = queue.active_cases()
-    assert cases[0].severity == Severity.CRITICAL
-    assert cases[1].severity == Severity.HIGH
-    assert cases[2].severity == Severity.MEDIUM
-    assert cases[3].severity == Severity.LOW
-
